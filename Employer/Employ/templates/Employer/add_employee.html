@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends 'index/index1.html' %}
+{% block content %}
+
+<form method="post">
+     {% csrf_token %}
+{#    {{ user }}#}
+{#{{ form.as_p }}#}
+{#<input type="submit" value="ok" class="btn btn-primary">#}
+
+
+<table class="table dark"  style="margin-left: 60px">
+            <div class="container">
+                <tr>
+                <td>Employee Name:{{ form.employee_name }}</td>
+                </tr>
+                <tr>
+                <td>contact:{{ form.contact }}</td>
+                </tr>
+                <tr>
+                    <td>email:{{ form.email}}</td>
+                </tr>
+                <tr>
+                    <td>address:{{ form.address }}</td>
+                </tr>
+                <tr>
+                    <td>user_name:{{ form.user_name }}</td>
+
+        </tr>
+                <tr>
+                    <td>Password:{{ form.password }}</td>
+                </tr>
+                <tr>
+                    <td>Employer:{{ form.employer }}</td>
+                </tr>
+                <tr>
+                    <td>Task:{{ form.task }}</td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="ok" class="btn btn-primary"></td>
+                </tr>
+
+                </div>
+    </table>
+
+</form>
+{% endblock %}
